@@ -1,0 +1,22 @@
+{
+  "name": "iris-slack-bot",
+  "version": "1.0.0",
+  "description": "slack bot with natural language processing",
+  "main": "server/service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgjr/iris-slack-bot.git"
+  },
+  "author": "Raul Gutierrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgjr/iris-slack-bot/issues"
+  },
+  "homepage": "https://github.com/rgjr/iris-slack-bot#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
