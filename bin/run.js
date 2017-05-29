@@ -1,14 +1,18 @@
 'use strict';
 
 const slackClient = require('../server/slackClient');
-const service = require('../server/service');
-const http = require('http');
-const server = http.createServer(service);
+const service     = require('../server/service');
+const http        = require('http');
+const server      = http.createServer(service);
 
-const slackToken = process.env.SLACK_API_TOKEN || '';
+const witToken    = process.env.WIT_TOKEN || '';
+const witClient   = require('../server/witClient')(witToken);
+
+const slackToken  = process.env.SLACK_API_TOKEN || '';
+
 const slackLogLevel = 'verbose';
 
-const rtm = slackClient.init(slackToken, slackLogLevel);
+const rtm = slackClient.init(slackToken, slackLogLevel, witClient);
 rtm.start();
 
 slackClient.addAuthenticatedHandler(rtm, () => server.listen(3000));
