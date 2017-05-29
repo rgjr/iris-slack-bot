@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rgjr/iris-slack-bot#readme",
   "dependencies": {
+    "@slack/client": "^3.10.0",
     "express": "^4.15.3"
   }
 }
